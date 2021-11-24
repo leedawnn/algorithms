@@ -1,23 +1,11 @@
-// 입력 받기
-const readline = require("readline");
+let fs = require('fs')
+let input = fs.readFileSync('dev/stdin').toString().split('\n')
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+let answer = ''
 
-let input = [];
+for (let i = 1; i <= input[0]; i++) {
+  tmp = input[i].split(' ')
+  answer += parseInt(tmp[0]) + parseInt(tmp[1]) + '\n'
+}
 
-rl.on("line", function (line) {
-  input.push(line);
-}).on("close", function () {
-// 문제 풀이 
-let n = Number(input[0])
-
-for (i = 1; i < n+1; i++) {
-  let a = Number(input[i].split(' ')[0])
-  let b = Number(input[i].split(' ')[1])
-
-  console.log(a + b)
-
-});
+console.log(answer)
