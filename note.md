@@ -90,3 +90,18 @@ let summary = data.reduce((a, b) => a + b)
 
 console.log(summary) // 28
 ```
+
+### 배열에서 특정 값 개수 구하기
+
+- filter()
+
+```javascript
+const arr = ['a', 'b', 'c', 'a']
+
+// 배열에서 'a' 개수 구하기
+let count = arr.filter(element => 'a' === element).length
+
+console.log(count) // 2
+```
+
+배열에서 특정 조건에 부합하는 값들만을 모아서 새로운 배열로 리턴하는 함수. filter 함수는 callback 함수에서 true를 리턴하는 element들을 모아서 새로운 배열을 만들어서 리턴한다.
