@@ -105,3 +105,39 @@ console.log(count) // 2
 ```
 
 배열에서 특정 조건에 부합하는 값들만을 모아서 새로운 배열로 리턴하는 함수. filter 함수는 callback 함수에서 true를 리턴하는 element들을 모아서 새로운 배열을 만들어서 리턴한다.
+
+### Array.from()으로 0으로 초기화된 배열 생성하기
+
+```javascript
+// Array.from()으로 길이가 5, 값이 0인 배열 생성하기
+const arr = Array.from({ length: 5 }, () => 0)
+console.log(arr) // Array(5) [0, 0, 0, 0, 0]
+console.log(arr[0]) // 0
+console.log(arr.length) // 5
+```
+
+Array.from()의 첫번째 매개변수로 **{length: 원하는 길이}** 객체를,
+두번째 매개변수로 **원하는 값을 반환하는 콜백함수**를 넘겨주면 된다.
+
+### 중복값 제거하기
+
+- set()
+
+```javascript
+const dupArr = [1, 2, 3, 1, 2]
+
+const set = new Set(dupArr)
+
+const uniqueArr = [...set]
+
+console.log(Array.isArray(uniqueArr))
+console.log(uniqueArr)
+```
+
+위의 예제에서는
+**const set = new Set(dupArr);**
+
+중복값이 있는 배열을 Set 객체로 만들어서 중복을 제거한 후,
+**const uniqueArr = [...set];**
+
+Spread Operator(전개연산자)를 사용하여 Set 객체를 다시 배열로 변환한다. Set 객체를 배열로 변환할 때, Spread Operator 대신 Array.from() 또는 forEach() 문을 사용할 수도 있음!
