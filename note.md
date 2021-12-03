@@ -22,16 +22,16 @@ let input = fs.readFileSync('/dev/stdin').toString().split('\n')
 const readline = require('readline')
 
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
+	input: process.stdin,
+	output: process.stdout,
 })
 
 rl.on('line', function (line) {
-  console.log(line)
+	console.log(line)
 
-  rl.close()
+	rl.close()
 }).on('close', function () {
-  // 문제 풀이
+	// 문제 풀이
 })
 ```
 
@@ -43,16 +43,16 @@ rl.on('line', function (line) {
 const readline = require('readline')
 
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
+	input: process.stdin,
+	output: process.stdout,
 })
 
 let input = []
 
 rl.on('line', function (line) {
-  input.push(line)
+	input.push(line)
 }).on('close', function () {
-  // 문제 풀이
+	// 문제 풀이
 })
 ```
 
@@ -66,7 +66,7 @@ rl.on('line', function (line) {
 
 보통 input.txt에서 받아온 데이터를 배열로 바꿔서 문제를 푸는데, split을 하면 패턴에 맞게 잘라진 값들이 숫자가 아닌 문자열로 들어가게된다. 원래부터 문자열 배열이었으면 문제 없지만 숫자가 문자열로 들어가면 골치가 아프다. 😤
 
-이 때, split 함수뒤에 **.map(Number)**만 써주면 자동으로 문자가 숫자로 바뀌어 배열로 들어가게 된다 👍🏻
+이 때, split 함수뒤에 **.map(Number)** 만 써주면 자동으로 문자가 숫자로 바뀌어 배열로 들어가게 된다 👍🏻
 
 ### Reduce 함수 사용하기
 
@@ -110,7 +110,7 @@ console.log(count) // 2
 
 ```javascript
 // Array.from()으로 길이가 5, 값이 0인 배열 생성하기
-const arr = Array.from({ length: 5 }, () => 0)
+const arr = Array.from({length: 5}, () => 0)
 console.log(arr) // Array(5) [0, 0, 0, 0, 0]
 console.log(arr[0]) // 0
 console.log(arr.length) // 5
@@ -141,3 +141,19 @@ console.log(uniqueArr)
 **const uniqueArr = [...set];**
 
 Spread Operator(전개연산자)를 사용하여 Set 객체를 다시 배열로 변환한다. Set 객체를 배열로 변환할 때, Spread Operator 대신 Array.from() 또는 forEach() 문을 사용할 수도 있음!
+
+### 배열에서 특정값 삭제하기
+
+```javascript
+let arr = ['a', 'b', 'b', 'c']
+
+// 원소 'b' 삭제
+for (let i = 0; i < arr.length; i++) {
+	if (arr[i] === 'b') {
+		arr.splice(i, 1)
+		i--
+	}
+}
+```
+
+반복문과 if문, splice() 함수를 이용하여 특정값을 삭제하는 코드이다. splice() 함수를 사용하면, 원본 배열의 원소가 삭제되고 배열의 길이가 변하기 때문에 splice() 함수를 사용해서 원소를 1개 삭제한 후에는, 배열의 index를 참조하는 i의 값을 하나 감소시킨 것(i--)에 주의해야함!
