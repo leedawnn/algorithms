@@ -144,6 +144,8 @@ Spread Operator(전개연산자)를 사용하여 Set 객체를 다시 배열로 
 
 ### 배열에서 특정값 삭제하기
 
+- splice()
+
 ```javascript
 let arr = ['a', 'b', 'b', 'c']
 
@@ -157,3 +159,15 @@ for (let i = 0; i < arr.length; i++) {
 ```
 
 반복문과 if문, splice() 함수를 이용하여 특정값을 삭제하는 코드이다. splice() 함수를 사용하면, 원본 배열의 원소가 삭제되고 배열의 길이가 변하기 때문에 splice() 함수를 사용해서 원소를 1개 삭제한 후에는, 배열의 index를 참조하는 i의 값을 하나 감소시킨 것(i--)에 주의해야함!
+
+- filter()
+
+```javascript
+let arr = ['a', 'b', 'b', 'c']
+
+// 원소 'b' 삭제
+let filtered = arr.filter(element => element !== 'b')
+
+console.log(arr) // ['a', 'b', 'b', 'c']
+console.log(filtered) // ['a', 'c']
+```
