@@ -171,3 +171,5 @@ let filtered = arr.filter(element => element !== 'b')
 console.log(arr) // ['a', 'b', 'b', 'c']
 console.log(filtered) // ['a', 'c']
 ```
+
+filter() 함수는 특정 조건에 부합하는 값만 모아서 새로운 배열을 만들어서 리턴한다. 위 코드는 배열 원소의 값이 'b'가 아닌 원소들을 가지고 새로운 배열을 만들었다.
