@@ -2,37 +2,39 @@
 
 ### 입력 받기
 
+BOJ를 예로 들었습니다.
+
 - fs 모듈(한 줄 입력)
 
 ```jsx
-let fs = require('fs')
-let input = fs.readFileSync('/dev/stdin').toString().split(' ')
+let fs = require('fs');
+let input = fs.readFileSync('/dev/stdin').toString().split(' ');
 ```
 
 - fs 모듈(여러 줄 입력)
 
 ```jsx
-let fs = require('fs')
-let input = fs.readFileSync('/dev/stdin').toString().split('\n')
+let fs = require('fs');
+let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 ```
 
 - readline 모듈(한 줄 입력)
 
 ```jsx
-const readline = require('readline')
+const readline = require('readline');
 
 const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
-})
+  input: process.stdin,
+  output: process.stdout
+});
 
 rl.on('line', function (line) {
-	console.log(line)
+  console.log(line);
 
-	rl.close()
+  rl.close();
 }).on('close', function () {
-	// 문제 풀이
-})
+  // 문제 풀이
+});
 ```
 
 기본적으로 매개변수 line에 할당되는 것이 입력값이며, **문자열**로 할당됩니다. 그리고 console.log(line);에 의해 입력 받은 값이 출력됩니다.
@@ -40,20 +42,20 @@ rl.on('line', function (line) {
 - readline 모듈(여러 줄 입력)
 
 ```jsx
-const readline = require('readline')
+const readline = require('readline');
 
 const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
-})
+  input: process.stdin,
+  output: process.stdout
+});
 
-let input = []
+let input = [];
 
 rl.on('line', function (line) {
-	input.push(line)
+  input.push(line);
 }).on('close', function () {
-	// 문제 풀이
-})
+  // 문제 풀이
+});
 ```
 
 ### 각 자리 수 구하는 수식
@@ -78,17 +80,17 @@ reduce() 메서드는 배열의 각 요소에 대해 reducer 함수를 실행한
 - **반환값은 그 이후의 원소에 대하여 accumulator에 저장됩니다.**
 
 ```javascript
-let data = [5, 2, 9, 8, 4]
+let data = [5, 2, 9, 8, 4];
 
 // minValue 구하기 예제
-let minValue = data.reduce((a, b) => Math.min(a, b))
+let minValue = data.reduce((a, b) => Math.min(a, b));
 
-console.log(minValue) // 2
+console.log(minValue); // 2
 
 // 원소의 합계 구하기 예제
-let summary = data.reduce((a, b) => a + b)
+let summary = data.reduce((a, b) => a + b);
 
-console.log(summary) // 28
+console.log(summary); // 28
 ```
 
 ### 배열에서 특정 값 개수 구하기
@@ -96,12 +98,12 @@ console.log(summary) // 28
 - filter()
 
 ```javascript
-const arr = ['a', 'b', 'c', 'a']
+const arr = ['a', 'b', 'c', 'a'];
 
 // 배열에서 'a' 개수 구하기
-let count = arr.filter(element => 'a' === element).length
+let count = arr.filter(element => 'a' === element).length;
 
-console.log(count) // 2
+console.log(count); // 2
 ```
 
 배열에서 특정 조건에 부합하는 값들만을 모아서 새로운 배열로 리턴하는 함수. filter 함수는 callback 함수에서 true를 리턴하는 element들을 모아서 새로운 배열을 만들어서 리턴한다.
@@ -110,10 +112,10 @@ console.log(count) // 2
 
 ```javascript
 // Array.from()으로 길이가 5, 값이 0인 배열 생성하기
-const arr = Array.from({length: 5}, () => 0)
-console.log(arr) // Array(5) [0, 0, 0, 0, 0]
-console.log(arr[0]) // 0
-console.log(arr.length) // 5
+const arr = Array.from({ length: 5 }, () => 0);
+console.log(arr); // Array(5) [0, 0, 0, 0, 0]
+console.log(arr[0]); // 0
+console.log(arr.length); // 5
 ```
 
 Array.from()의 첫번째 매개변수로 **{length: 원하는 길이}** 객체를,
@@ -124,14 +126,14 @@ Array.from()의 첫번째 매개변수로 **{length: 원하는 길이}** 객체�
 - set()
 
 ```javascript
-const dupArr = [1, 2, 3, 1, 2]
+const dupArr = [1, 2, 3, 1, 2];
 
-const set = new Set(dupArr)
+const set = new Set(dupArr);
 
-const uniqueArr = [...set]
+const uniqueArr = [...set];
 
-console.log(Array.isArray(uniqueArr))
-console.log(uniqueArr)
+console.log(Array.isArray(uniqueArr));
+console.log(uniqueArr);
 ```
 
 위의 예제에서는
@@ -147,14 +149,14 @@ Spread Operator(전개연산자)를 사용하여 Set 객체를 다시 배열로 
 - splice()
 
 ```javascript
-let arr = ['a', 'b', 'b', 'c']
+let arr = ['a', 'b', 'b', 'c'];
 
 // 원소 'b' 삭제
 for (let i = 0; i < arr.length; i++) {
-	if (arr[i] === 'b') {
-		arr.splice(i, 1)
-		i--
-	}
+  if (arr[i] === 'b') {
+    arr.splice(i, 1);
+    i--;
+  }
 }
 ```
 
@@ -163,13 +165,13 @@ for (let i = 0; i < arr.length; i++) {
 - filter()
 
 ```javascript
-let arr = ['a', 'b', 'b', 'c']
+let arr = ['a', 'b', 'b', 'c'];
 
 // 원소 'b' 삭제
-let filtered = arr.filter(element => element !== 'b')
+let filtered = arr.filter(element => element !== 'b');
 
-console.log(arr) // ['a', 'b', 'b', 'c']
-console.log(filtered) // ['a', 'c']
+console.log(arr); // ['a', 'b', 'b', 'c']
+console.log(filtered); // ['a', 'c']
 ```
 
 filter() 함수는 특정 조건에 부합하는 값만 모아서 새로운 배열을 만들어서 리턴한다. 위 코드는 배열 원소의 값이 'b'가 아닌 원소들을 가지고 새로운 배열을 만들었다.
