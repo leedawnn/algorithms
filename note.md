@@ -64,6 +64,57 @@ rl.on('line', function (line) {
 - 10의 자리에 있는 수 구하기: **Math.floor(num / 10)**
 - 1의 자리에 있는 수 10의 자리 수로 만들기 : **(num % 10) \* 10**
 
+### 반올림(round), 올림(ceil), 내림(floor)
+
+- 올림: **Math.ceil(x)**
+
+  ```javascript
+  const ceil = Math.ceil(1.222); // 2
+  const ceil_2 = Math.ceil(null); // 0
+  const ceil_3 = Math.ceil(0); // 0
+  const ceil_4 = Math.ceil(-1.777); // -1
+
+  // 소수점 이하
+  const ceil_5 = Math.ceil(1.222 * 10) / 10; // 1.3
+  const ceil_6 = Math.ceil(1.222 * 100) / 100; // 1.23
+
+  // 10단위, 100단위
+  const ceil_7 = Math.ceil(1222 / 10) * 10; // 1230
+  const ceil_8 = Math.ceil(1222 / 100) * 100; // 1300
+  ```
+
+- 내림 : **Math.floor(x)**
+
+  ```javascript
+  const floor = Math.floor(1.222); // 1
+  const floor_2 = Math.floor(null); // 0
+  const floor_3 = Math.floor(0); // 0
+  const floor_4 = Math.floor(-1.777); // -2
+
+  // 소수점이하
+  const floor_5 = Math.floor(1.777 * 10) / 10; // 1.7
+  const floor_6 = Math.floor(1.777 * 100) / 100; // 1.77
+
+  // 10단위, 100단위
+  const floor_7 = Math.floor(1777 / 10) * 10; // 1770
+  const floor_8 = Math.floor(1777 / 100) * 100; // 1700
+  ```
+
+- 반올림 : **Math.round(x)**
+
+  ```javascript
+  const round = Math.round(1.222); // 1
+  const round_2 = Math.round(null); // 0
+  const round_3 = Math.round(0); // 0
+
+  // 소수점이하
+  const round_4 = Math.round(1.777 * 10) / 10; // 1.8
+
+  // 10단위
+  const round_5 = Math.round(1001 / 10) * 10; // 1000
+  const round_6 = Math.round(1005 / 10) * 10; // 1010
+  ```
+
 ### 문자열 배열을 숫자 배열로 바꾸기
 
 보통 input.txt에서 받아온 데이터를 배열로 바꿔서 문제를 푸는데, split을 하면 패턴에 맞게 잘라진 값들이 숫자가 아닌 문자열로 들어가게된다. 원래부터 문자열 배열이었으면 문제 없지만 숫자가 문자열로 들어가면 골치가 아프다. 😤
