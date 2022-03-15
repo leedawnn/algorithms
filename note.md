@@ -1,5 +1,20 @@
 # ⚡️ 자바스크립트 코딩테스트 노트
 
+## 목차
+
+1. [입력받기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0)
+2. [각 자리 수 구하는 식](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EA%B0%81-%EC%9E%90%EB%A6%AC-%EC%88%98-%EA%B5%AC%ED%95%98%EB%8A%94-%EC%88%98%EC%8B%9D)
+3. [반올림(round), 올림(ceil), 내림(floor)](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%98%EC%98%AC%EB%A6%BCround-%EC%98%AC%EB%A6%BCceil-%EB%82%B4%EB%A6%BCfloor)
+4. [문자열 배열을 숫자 배열로 바꾸기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%B0%EC%97%B4%EC%9D%84-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0)
+5. [Reduce 함수 사용하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#reduce-%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
+6. [배열에서 특정 값 개수 구하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95-%EA%B0%92-%EA%B0%9C%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0)
+7. [Array.from()으로 0으로 초기화된 배열 생성하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#arrayfrom%EC%9C%BC%EB%A1%9C-0%EC%9C%BC%EB%A1%9C-%EC%B4%88%EA%B8%B0%ED%99%94%EB%90%9C-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
+8. [중복값 제거하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%A4%91%EB%B3%B5%EA%B0%92-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
+9. [배열에서 특정값 삭제하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95%EA%B0%92-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0)
+
+
+---
+
 ### 입력 받기
 
 BOJ를 예로 들었습니다.
@@ -58,11 +73,15 @@ rl.on('line', function (line) {
 });
 ```
 
+---
+
 ### 각 자리 수 구하는 수식
 
 - 1의 자리에 있는 수 구하기: **num % 10**
 - 10의 자리에 있는 수 구하기: **Math.floor(num / 10)**
 - 1의 자리에 있는 수 10의 자리 수로 만들기 : **(num % 10) \* 10**
+
+---
 
 ### 반올림(round), 올림(ceil), 내림(floor)
 
@@ -115,11 +134,15 @@ rl.on('line', function (line) {
   const round_6 = Math.round(1005 / 10) * 10; // 1010
   ```
 
+---
+
 ### 문자열 배열을 숫자 배열로 바꾸기
 
 보통 input.txt에서 받아온 데이터를 배열로 바꿔서 문제를 푸는데, split을 하면 패턴에 맞게 잘라진 값들이 숫자가 아닌 문자열로 들어가게된다. 원래부터 문자열 배열이었으면 문제 없지만 숫자가 문자열로 들어가면 골치가 아프다. 😤
 
 이 때, split 함수뒤에 **.map(Number)** 만 써주면 자동으로 문자가 숫자로 바뀌어 배열로 들어가게 된다 👍🏻
+
+---
 
 ### Reduce 함수 사용하기
 
@@ -144,6 +167,8 @@ let summary = data.reduce((a, b) => a + b);
 console.log(summary); // 28
 ```
 
+---
+
 ### 배열에서 특정 값 개수 구하기
 
 - filter()
@@ -159,6 +184,8 @@ console.log(count); // 2
 
 배열에서 특정 조건에 부합하는 값들만을 모아서 새로운 배열로 리턴하는 함수. filter 함수는 callback 함수에서 true를 리턴하는 element들을 모아서 새로운 배열을 만들어서 리턴한다.
 
+---
+
 ### Array.from()으로 0으로 초기화된 배열 생성하기
 
 ```javascript
@@ -171,6 +198,8 @@ console.log(arr.length); // 5
 
 Array.from()의 첫번째 매개변수로 **{length: 원하는 길이}** 객체를,
 두번째 매개변수로 **원하는 값을 반환하는 콜백함수**를 넘겨주면 된다.
+
+---
 
 ### 중복값 제거하기
 
@@ -194,6 +223,8 @@ console.log(uniqueArr);
 **const uniqueArr = [...set];**
 
 Spread Operator(전개연산자)를 사용하여 Set 객체를 다시 배열로 변환한다. Set 객체를 배열로 변환할 때, Spread Operator 대신 Array.from() 또는 forEach() 문을 사용할 수도 있음!
+
+---
 
 ### 배열에서 특정값 삭제하기
 
