@@ -12,7 +12,6 @@
 8. [중복값 제거하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%A4%91%EB%B3%B5%EA%B0%92-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
 9. [배열에서 특정값 삭제하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95%EA%B0%92-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0)
 
-
 ---
 
 ### 입력 받기
@@ -257,3 +256,14 @@ console.log(filtered); // ['a', 'c']
 ```
 
 filter() 함수는 특정 조건에 부합하는 값만 모아서 새로운 배열을 만들어서 리턴한다. 위 코드는 배열 원소의 값이 'b'가 아닌 원소들을 가지고 새로운 배열을 만들었다.
+
+### 문자열을 배열로 변환하기
+
+```javascript
+const input = ['ksekkset'];
+const arr = Array.from(input);
+
+console.log(arr); // ['k', 's', 'e', 'k', 'k', 's', 'e', 't']
+```
+
+Javascript에는 문자열을 한꺼번에 배열로 만들 때 편하게 처리해주는 from이라는 기능이 있음.
