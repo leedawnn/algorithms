@@ -267,3 +267,25 @@ console.log(arr); // ['k', 's', 'e', 'k', 'k', 's', 'e', 't']
 ```
 
 Javascript에는 문자열을 한꺼번에 배열로 만들 때 편하게 처리해주는 from이라는 기능이 있음.
+
+### 배열에서 원하는 값 찾기
+
+자바스크립트에서 배열에서 특정 값을 검색할 때, indexOf()와 includes()를 이용하여 쉽게 찾을 수 있다.
+
+```javascript
+var a = [1, 2, 3, 4, 5, 1, 2, 3];
+
+a.indexOf(3); //2
+a.indexOf(6); //-1
+```
+
+indexOf()는 찾은 값의 첫번째 원소의 위치를 반환해주며, 없을 경우 -1을 리턴함.
+
+```javascript
+var a = [1, 2, 3, 4, 5, 1, 2, 3];
+
+a.includes(3); //true
+a.includes(6); //false
+```
+
+includes()는 true / false 로 있다, 없다를 직관적으로 리턴해줌.
