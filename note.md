@@ -205,23 +205,17 @@ Array.from()의 첫번째 매개변수로 **{length: 원하는 길이}** 객체�
 - set()
 
 ```javascript
-const dupArr = [1, 2, 3, 1, 2];
-
-const set = new Set(dupArr);
-
-const uniqueArr = [...set];
-
-console.log(Array.isArray(uniqueArr));
-console.log(uniqueArr);
+const arrDup = ['라이언', '어피치', '프로도', '콘', '라이언', '프로도'];
+const arrUnique = [...new Set(arrDup)];
+console.log(arrUnique); // ['라이언', '어피치', '프로도', '콘']
 ```
 
-위의 예제에서는
-**const set = new Set(dupArr);**
+자바스크립트의 셋(Set) 객체는 맵(Map) 객체에서 값이 없고 키만 있는 것으로 이해하면 된다.
+Set 객체 생성자는 배열을 인자로 받아서 중복이 없는 셋 객체를 반환하는 특징이 있고, 이 특징을 활용해서 중복이 없는 배열을 다시 만들 수 있다.
 
-중복값이 있는 배열을 Set 객체로 만들어서 중복을 제거한 후,
-**const uniqueArr = [...set];**
+중복 있는 배열 -> 셋 -> 확산 연산자로 펼침 -> 배열로 생성 과정을 거쳐 중복 없는 배열이 만들어진다.
 
-Spread Operator(전개연산자)를 사용하여 Set 객체를 다시 배열로 변환한다. Set 객체를 배열로 변환할 때, Spread Operator 대신 Array.from() 또는 forEach() 문을 사용할 수도 있음!
+단 1줄의 코드로 배열의 중복을 없앨 수 있기 때문에 단순히 배열의 중복을 없애는 것이 목적이면 이 방법이 가장 효율적이다.
 
 ---
 
