@@ -11,7 +11,10 @@
 7. [Array.from()으로 0으로 초기화된 배열 생성하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#arrayfrom%EC%9C%BC%EB%A1%9C-0%EC%9C%BC%EB%A1%9C-%EC%B4%88%EA%B8%B0%ED%99%94%EB%90%9C-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
 8. [중복값 제거하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%A4%91%EB%B3%B5%EA%B0%92-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
 9. [배열에서 특정값 삭제하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95%EA%B0%92-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0)
-10. [대문자, 소문자 변환]()
+10. 문자열
+
+- 대문자, 소문자 변환
+- 문자열 반대로 뒤집기
 
 ---
 
@@ -285,7 +288,46 @@ a.includes(6); //false
 
 includes()는 true / false 로 있다, 없다를 직관적으로 리턴해줌.
 
-### 대문자, 소문자 변환
+### 문자열
+
+#### 대문자, 소문자 변환
 
 - toUpperCase()
+
+  ```javascript
+  let input = 'GooD';
+
+  input = input.toUpperCase();
+  console.log(input); // GOOD
+  ```
+
 - toLowerCase()
+
+  ```javascript
+  let input = 'GOOD';
+
+  input = input.toLowerCase();
+  console.log(input); // good
+  ```
+
+#### 문자열 반대로 뒤집기
+
+- reverse()
+
+```javascript
+// 전체 문자열 반대로 뒤집기
+let name = 'kkimi';
+let nameReverse = name.split('').reverse().join('');
+
+console.log(`${name} => ${nameReverse}`);
+// kkimi => imikk
+
+// 중간 구분자를 가진 단어 리스트 반대로 뒤집기
+let list = '구련, 임륭구, 최준웅';
+let separate = list.split(' ,');
+
+let listReverse = separate.reverse().join(',');
+
+console.log(`${list} => ${listReverse}`);
+// 구련, 임륭구, 최준웅 => 구련, 임륭구, 최준웅
+```
