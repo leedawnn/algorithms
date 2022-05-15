@@ -11,6 +11,7 @@
 7. [Array.from()으로 0으로 초기화된 배열 생성하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#arrayfrom%EC%9C%BC%EB%A1%9C-0%EC%9C%BC%EB%A1%9C-%EC%B4%88%EA%B8%B0%ED%99%94%EB%90%9C-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
 8. [중복값 제거하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%A4%91%EB%B3%B5%EA%B0%92-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
 9. [배열에서 특정값 삭제하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95%EA%B0%92-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0)
+10. [대문자, 소문자 변환]()
 
 ---
 
@@ -38,16 +39,16 @@ let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 const readline = require('readline');
 
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+	input: process.stdin,
+	output: process.stdout,
 });
 
 rl.on('line', function (line) {
-  console.log(line);
+	console.log(line);
 
-  rl.close();
+	rl.close();
 }).on('close', function () {
-  // 문제 풀이
+	// 문제 풀이
 });
 ```
 
@@ -59,16 +60,16 @@ rl.on('line', function (line) {
 const readline = require('readline');
 
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+	input: process.stdin,
+	output: process.stdout,
 });
 
 let input = [];
 
 rl.on('line', function (line) {
-  input.push(line);
+	input.push(line);
 }).on('close', function () {
-  // 문제 풀이
+	// 문제 풀이
 });
 ```
 
@@ -228,10 +229,10 @@ let arr = ['a', 'b', 'b', 'c'];
 
 // 원소 'b' 삭제
 for (let i = 0; i < arr.length; i++) {
-  if (arr[i] === 'b') {
-    arr.splice(i, 1);
-    i--;
-  }
+	if (arr[i] === 'b') {
+		arr.splice(i, 1);
+		i--;
+	}
 }
 ```
 
@@ -283,3 +284,8 @@ a.includes(6); //false
 ```
 
 includes()는 true / false 로 있다, 없다를 직관적으로 리턴해줌.
+
+### 대문자, 소문자 변환
+
+- toUpperCase()
+- toLowerCase()
