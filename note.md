@@ -227,6 +227,17 @@ Set 객체 생성자는 배열을 인자로 받아서 중복이 없는 셋 객�
 
 ### 배열에서 특정값 삭제하기
 
+#### 배열 전체 값 삭제
+
+```javascript
+let arr = ['a', 'b', 'c'];
+
+// 배열의 첫번째 값 삭제
+arr.shift();
+
+console.log(arr); // ['b', 'c']
+```
+
 - splice()
 
 ```javascript
