@@ -2,19 +2,21 @@
 
 ## 목차
 
-1. [입력받기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0)
-2. [각 자리 수 구하는 식](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EA%B0%81-%EC%9E%90%EB%A6%AC-%EC%88%98-%EA%B5%AC%ED%95%98%EB%8A%94-%EC%88%98%EC%8B%9D)
-3. [반올림(round), 올림(ceil), 내림(floor)](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%98%EC%98%AC%EB%A6%BCround-%EC%98%AC%EB%A6%BCceil-%EB%82%B4%EB%A6%BCfloor)
-4. [문자열 배열을 숫자 배열로 바꾸기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%B0%EC%97%B4%EC%9D%84-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0)
-5. [Reduce 함수 사용하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#reduce-%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
-6. [배열에서 특정 값 개수 구하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95-%EA%B0%92-%EA%B0%9C%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0)
-7. [Array.from()으로 0으로 초기화된 배열 생성하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#arrayfrom%EC%9C%BC%EB%A1%9C-0%EC%9C%BC%EB%A1%9C-%EC%B4%88%EA%B8%B0%ED%99%94%EB%90%9C-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
-8. [중복값 제거하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%A4%91%EB%B3%B5%EA%B0%92-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
-9. [배열에서 특정값 삭제하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95%EA%B0%92-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0)
+1.  [입력받기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0)
+2.  [각 자리 수 구하는 식](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EA%B0%81-%EC%9E%90%EB%A6%AC-%EC%88%98-%EA%B5%AC%ED%95%98%EB%8A%94-%EC%88%98%EC%8B%9D)
+3.  [반올림(round), 올림(ceil), 내림(floor)](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%98%EC%98%AC%EB%A6%BCround-%EC%98%AC%EB%A6%BCceil-%EB%82%B4%EB%A6%BCfloor)
+4.  [문자열 배열을 숫자 배열로 바꾸기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%B0%EC%97%B4%EC%9D%84-%EC%88%AB%EC%9E%90-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0)
+5.  [Reduce 함수 사용하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#reduce-%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
+6.  [배열에서 특정 값 개수 구하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95-%EA%B0%92-%EA%B0%9C%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0)
+7.  [Array.from()으로 0으로 초기화된 배열 생성하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#arrayfrom%EC%9C%BC%EB%A1%9C-0%EC%9C%BC%EB%A1%9C-%EC%B4%88%EA%B8%B0%ED%99%94%EB%90%9C-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
+8.  [중복값 제거하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%A4%91%EB%B3%B5%EA%B0%92-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
+9.  [배열에서 특정값 삭제하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C-%ED%8A%B9%EC%A0%95%EA%B0%92-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0)
 10. 문자열
 
-- 대문자, 소문자 변환
-- 문자열 반대로 뒤집기
+    - [문자열을 배열로 변환하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0)
+    - [대문자, 소문자 변환](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%8C%80%EB%AC%B8%EC%9E%90-%EC%86%8C%EB%AC%B8%EC%9E%90-%EB%B3%80%ED%99%98)
+    - [문자열 반대로 뒤집기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%98%EB%8C%80%EB%A1%9C-%EB%92%A4%EC%A7%91%EA%B8%B0)
+    - [특정 문자열 제거](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%A0%9C%EA%B1%B0)
 
 ---
 
@@ -255,17 +257,6 @@ console.log(filtered); // ['a', 'c']
 
 filter() 함수는 특정 조건에 부합하는 값만 모아서 새로운 배열을 만들어서 리턴한다. 위 코드는 배열 원소의 값이 'b'가 아닌 원소들을 가지고 새로운 배열을 만들었다.
 
-### 문자열을 배열로 변환하기
-
-```javascript
-const input = ['ksekkset'];
-const arr = Array.from(input);
-
-console.log(arr); // ['k', 's', 'e', 'k', 'k', 's', 'e', 't']
-```
-
-Javascript에는 문자열을 한꺼번에 배열로 만들 때 편하게 처리해주는 from이라는 기능이 있음.
-
 ### 배열에서 원하는 값 찾기
 
 자바스크립트에서 배열에서 특정 값을 검색할 때, indexOf()와 includes()를 이용하여 쉽게 찾을 수 있다.
@@ -289,6 +280,17 @@ a.includes(6); //false
 includes()는 true / false 로 있다, 없다를 직관적으로 리턴해줌.
 
 ### 문자열
+
+#### 문자열을 배열로 변환하기
+
+```javascript
+const input = ['ksekkset'];
+const arr = Array.from(input);
+
+console.log(arr); // ['k', 's', 'e', 'k', 'k', 's', 'e', 't']
+```
+
+Javascript에는 문자열을 한꺼번에 배열로 만들 때 편하게 처리해주는 from이라는 기능이 있음.
 
 #### 대문자, 소문자 변환
 
@@ -330,4 +332,28 @@ let listReverse = separate.reverse().join(',');
 
 console.log(`${list} => ${listReverse}`);
 // 구련, 임륭구, 최준웅 => 구련, 임륭구, 최준웅
+```
+
+#### 특정 문자열 제거
+
+##### 특정 문자열 하나만 제거
+
+replace()를 사용하면 특정 문자열의 첫번째로 발견된 것만 삭제된다.
+
+```javascript
+let myStr = 'Hello! World!";
+myStr = myStr.replace('!', '');
+
+console.log(myStr); // Hello World!
+```
+
+##### 특정 문자열 모두 제거
+
+특정 문자열을 모두 찾아 제거하고 싶다면 정규표현식을 사용하면 된다.
+
+```javascript
+let myStr = 'Hello! World!";
+myStr = myStr.replace(/\!/g, '');
+
+console.log(myStr); // Hello World
 ```
