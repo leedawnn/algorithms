@@ -22,3 +22,12 @@ function solution(phone_number) {
 	}
 	return answer;
 }
+
+// 또 다른 풀이
+function solution(phone_number) {
+	let answer = '';
+	answer.padStart(phone_number.length - 4, '*');
+
+	answer += phone_number.slice(phone_number.length - 4);
+	return answer;
+}
