@@ -18,6 +18,8 @@
     - [문자열 반대로 뒤집기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%98%EB%8C%80%EB%A1%9C-%EB%92%A4%EC%A7%91%EA%B8%B0)
     - [특정 문자열 제거](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%A0%9C%EA%B1%B0)
 
+11. 0부터 n까지 숫자범위 배열 생성하기
+
 ---
 
 ### 입력 받기
@@ -367,4 +369,16 @@ let myStr = 'Hello! World!";
 myStr = myStr.replace(/\!/g, '');
 
 console.log(myStr); // Hello World
+```
+
+### 0부터 n까지 숫자범위 배열 생성하기
+
+단순히 for문을 돌려서 배열을 만들 수도 있지만, 코드가 너무 길어진다. 짧은 코드로 생성할 수 있는 방법을 정리했다.
+
+```javascript
+let range = [...Array(5)].map((v, i) => i);
+let range2 = [...Array(5).keys()].map(i => i);
+let range3 = Array.from({ length: 5 }, (v, i) => i);
+
+// 모두 [0,1,2,3,4] 출력
 ```
