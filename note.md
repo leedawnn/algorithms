@@ -19,6 +19,7 @@
     - [특정 문자열 제거](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%A0%9C%EA%B1%B0)
 
 11. 0부터 n까지 숫자범위 배열 생성하기
+12. 오름차순, 내림차순
 
 ---
 
@@ -381,4 +382,22 @@ let range2 = [...Array(5).keys()].map(i => i);
 let range3 = Array.from({ length: 5 }, (v, i) => i);
 
 // 모두 [0,1,2,3,4] 출력
+```
+
+### 오름차순
+
+```javascript
+const arr = [1, 55, 7, 45, 778];
+const result = arr.sort((a, b) => a - b);
+
+console.log(result); // [ 1, 7, 45, 55, 778 ]
+```
+
+### 내림차순
+
+```javascript
+const arr = [1, 55, 7, 45, 778];
+const result = arr.sort((a, b) => b - a);
+
+console.log(result); // [ 778, 55, 45, 7, 1 ]
 ```
