@@ -401,3 +401,5 @@ const result = arr.sort((a, b) => b - a);
 
 console.log(result); // [ 778, 55, 45, 7, 1 ]
 ```
+
+sort 메서드는 숫자뿐만 아니라 알파벳 또한 대문자와 소문자별로 정렬시킨다.
