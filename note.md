@@ -384,7 +384,9 @@ let range3 = Array.from({ length: 5 }, (v, i) => i);
 // 모두 [0,1,2,3,4] 출력
 ```
 
-### 오름차순
+### 숫자 정렬
+
+#### 오름차순
 
 ```javascript
 const arr = [1, 55, 7, 45, 778];
@@ -393,7 +395,7 @@ const result = arr.sort((a, b) => a - b);
 console.log(result); // [ 1, 7, 45, 55, 778 ]
 ```
 
-### 내림차순
+#### 내림차순
 
 ```javascript
 const arr = [1, 55, 7, 45, 778];
@@ -402,4 +404,32 @@ const result = arr.sort((a, b) => b - a);
 console.log(result); // [ 778, 55, 45, 7, 1 ]
 ```
 
-sort 메서드는 숫자뿐만 아니라 알파벳 또한 대문자와 소문자별로 정렬시킨다.
+### 문자 정렬
+
+#### 오름차순
+
+```javascript
+let arr = ['a', 'b', 'c', 'd'];
+arr.sort((a, b) => (b > a ? -1 : 1));
+```
+
+#### 내림차순
+
+```javascript
+let arr = ['a', 'b', 'c', 'd'];
+arr.sort((a, b) => (a > b ? -1 : 1));
+```
+
+### 2차원 배열을 1차원 배열로 전환
+
+#### reduce
+
+```javascript
+const arr = [['a', 'b'],['c', 'd'],['e', 'f']];
+
+const arr2 = arr.reduce(function (acc, cur) {
+	return acc.concat(cur);
+});
+
+console.log(arr2); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+```
