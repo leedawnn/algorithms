@@ -7,6 +7,7 @@ const input = require('fs')
 
 const arr = input[0].splice('').map(Number);
 
+// 연립방정식
 function solution(arr) {
   const a = arr[0];
   const b = arr[1];
@@ -21,4 +22,16 @@ function solution(arr) {
   console.log(`${x} ${y}`);
 }
 
+// 완전 탐색
+function solution1(arr) {
+  for (let x = -999; x < 1000; x++) {
+    for (let y = -999; y < 1000; y++) {
+      if (a * x + b * y === c && d * x + e * y === f) {
+        console.log(`${x} ${y}`);
+      }
+    }
+  }
+}
+
 solution(arr);
+solution1(arr);
