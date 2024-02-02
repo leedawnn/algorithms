@@ -24,6 +24,8 @@ function solution(arr) {
 
 // 완전 탐색
 function solution1(arr) {
+  const [a, b, c, d, e, f] = arr;
+
   for (let x = -999; x < 1000; x++) {
     for (let y = -999; y < 1000; y++) {
       if (a * x + b * y === c && d * x + e * y === f) {
