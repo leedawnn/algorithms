@@ -18,8 +18,12 @@
     - [문자열 반대로 뒤집기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%98%EB%8C%80%EB%A1%9C-%EB%92%A4%EC%A7%91%EA%B8%B0)
     - [특정 문자열 제거](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%A0%9C%EA%B1%B0)
 
-11. 0부터 n까지 숫자범위 배열 생성하기
-12. 오름차순, 내림차순
+11. [0부터 n까지 숫자범위 배열 생성하기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#0%EB%B6%80%ED%84%B0-n%EA%B9%8C%EC%A7%80-%EC%88%AB%EC%9E%90%EB%B2%94%EC%9C%84-%EB%B0%B0%EC%97%B4-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0)
+12. [숫자 정렬](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%88%AB%EC%9E%90-%EC%A0%95%EB%A0%AC)
+    - 오름차순, 내림차순
+13. [문자 정렬](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%AC%B8%EC%9E%90-%EC%A0%95%EB%A0%AC)
+    - 오름차순, 내림차순
+14. [object에서 특정 값 찾기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#object에서-특정-값-찾기)
 
 ---
 
@@ -47,16 +51,16 @@ let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 const readline = require('readline');
 
 const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
+  input: process.stdin,
+  output: process.stdout,
 });
 
 rl.on('line', function (line) {
-	console.log(line);
+  console.log(line);
 
-	rl.close();
+  rl.close();
 }).on('close', function () {
-	// 문제 풀이
+  // 문제 풀이
 });
 ```
 
@@ -68,16 +72,16 @@ rl.on('line', function (line) {
 const readline = require('readline');
 
 const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
+  input: process.stdin,
+  output: process.stdout,
 });
 
 let input = [];
 
 rl.on('line', function (line) {
-	input.push(line);
+  input.push(line);
 }).on('close', function () {
-	// 문제 풀이
+  // 문제 풀이
 });
 ```
 
@@ -185,7 +189,7 @@ console.log(summary); // 28
 const arr = ['a', 'b', 'c', 'a'];
 
 // 배열에서 'a' 개수 구하기
-let count = arr.filter(element => 'a' === element).length;
+let count = arr.filter((element) => 'a' === element).length;
 
 console.log(count); // 2
 ```
@@ -248,10 +252,10 @@ let arr = ['a', 'b', 'b', 'c'];
 
 // 원소 'b' 삭제
 for (let i = 0; i < arr.length; i++) {
-	if (arr[i] === 'b') {
-		arr.splice(i, 1);
-		i--;
-	}
+  if (arr[i] === 'b') {
+    arr.splice(i, 1);
+    i--;
+  }
 }
 ```
 
@@ -263,7 +267,7 @@ for (let i = 0; i < arr.length; i++) {
 let arr = ['a', 'b', 'b', 'c'];
 
 // 원소 'b' 삭제
-let filtered = arr.filter(element => element !== 'b');
+let filtered = arr.filter((element) => element !== 'b');
 
 console.log(arr); // ['a', 'b', 'b', 'c']
 console.log(filtered); // ['a', 'c']
@@ -378,7 +382,7 @@ console.log(myStr); // Hello World
 
 ```javascript
 let range = [...Array(5)].map((v, i) => i);
-let range2 = [...Array(5).keys()].map(i => i);
+let range2 = [...Array(5).keys()].map((i) => i);
 let range3 = Array.from({ length: 5 }, (v, i) => i);
 
 // 모두 [0,1,2,3,4] 출력
@@ -425,11 +429,25 @@ arr.sort((a, b) => (a > b ? -1 : 1));
 #### reduce
 
 ```javascript
-const arr = [['a', 'b'],['c', 'd'],['e', 'f']];
+const arr = [
+  ['a', 'b'],
+  ['c', 'd'],
+  ['e', 'f'],
+];
 
 const arr2 = arr.reduce(function (acc, cur) {
-	return acc.concat(cur);
+  return acc.concat(cur);
 });
 
 console.log(arr2); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+```
+
+### object에서 특정 값 찾기
+
+#### find 활용하기
+
+```javascript
+function sol(obj, value) {
+  Object.keys(obj).find((key) => obj[key] === value);
+}
 ```
