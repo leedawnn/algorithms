@@ -3,11 +3,9 @@ const input = require('fs')
   .toString()
   .trim()
   .split('\n')
-  .map((el) => el.split(' ').map((el) => Number(el)));
+  .map((el) => el.split(' ').map(Number));
 
-// TODO: 복습!
-
-let arr = input.slice(1, input.length);
+const arr = input.slice(1);
 
 function sol(arr) {
   let answer = [];
@@ -17,7 +15,6 @@ function sol(arr) {
 
     for (let j = 0; j < arr.length; j++) {
       if (i !== j) {
-        // 현재 사람의 몸무게와 키가 다른 사람의 몸무게와 키보다 모두 작을 경우 rank 증가
         if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]) rank++;
       }
     }
