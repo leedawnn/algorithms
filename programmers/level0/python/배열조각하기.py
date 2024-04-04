@@ -19,3 +19,6 @@ def solution(arr, query):
         else: 
             arr = arr[q:]
     return arr
+
+# 투 포인터 활용
+# https://butter-shower.tistory.com/226
