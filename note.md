@@ -2,6 +2,8 @@
 
 ## 목차
 
+### Javascript
+
 1.  [입력받기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0)
 2.  [각 자리 수 구하는 식](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EA%B0%81-%EC%9E%90%EB%A6%AC-%EC%88%98-%EA%B5%AC%ED%95%98%EB%8A%94-%EC%88%98%EC%8B%9D)
 3.  [반올림(round), 올림(ceil), 내림(floor)](https://github.com/leedawnn/js-algorithm/blob/main/note.md#%EB%B0%98%EC%98%AC%EB%A6%BCround-%EC%98%AC%EB%A6%BCceil-%EB%82%B4%EB%A6%BCfloor)
@@ -26,6 +28,14 @@
 14. [object에서 특정 값 찾기](https://github.com/leedawnn/js-algorithm/blob/main/note.md#object에서-특정-값-찾기)
 
 ---
+
+### Python
+
+1. 2차원 배열 만들기
+
+---
+
+## Javascript
 
 ### 입력 받기
 
@@ -450,4 +460,19 @@ console.log(arr2); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
 function sol(obj, value) {
   Object.keys(obj).find((key) => obj[key] === value);
 }
+```
+
+---
+
+## Python
+
+### 2차원 배열 만들기
+
+```python
+# 리스트 컴프리헨션 사용하기
+# 3 x 4 배열, 모든 값을 0으로 초기화
+
+rows = 3
+cols = 4
+arr = [[0 for _ in range(cols)] for _ in range(rows)]
 ```
